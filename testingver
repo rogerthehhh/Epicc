@@ -1,0 +1,183 @@
+if game.PlaceId == 2788229376 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("RGT X (TESTING VERSION)", "BloodTheme")
+----------------Tabs--------------------     
+    local Main = Window:NewTab("Main")
+    local Player = Window:NewTab("Player")
+    local Animations = Window:NewTab("Animations")
+    local Teleports = Window:NewTab("Teleports")
+    local Toggles = Window:NewTab("Toggles")
+    local Extra = Window:NewTab("Extra")
+----------------BUTTONS--------------------     
+   
+    local Section = Teleports:NewSection("Teleport")
+    
+Section:NewButton("Revolver", "Revolver", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-626.771057, 25.348465, -124.606995, -0.554844439, 0, 0.831954122, 0, 1, 0, -0.831954122, 0, -0.554844439)
+end)
+
+Section:NewButton("Bank", "Bank", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-450.474609, 39.012455, -284.325287, -0.0565558225, 5.37572511e-08, -0.998399615, 1.16139658e-08, 1, 5.31855413e-08, 0.998399615, -8.58742943e-09, -0.0565558225)
+end)
+
+Section:NewButton("GunStore(UP)", "Gunstoreup", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(465.917206, 48.0677338, -624.934143, -0.0453156754, 1.27034516e-09, -0.998972833, 1.69051673e-09, 1, 1.1949659e-09, 0.998972833, -1.63462976e-09, -0.0453156754)
+end)
+
+Section:NewButton("Gunstore(Down)", "Gunstoredown", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-582.903564, 8.31201267, -720.298523, 0.998324335, -6.48113385e-08, -0.0578740276, 6.47793001e-08, 1, -2.42800979e-09, 0.0578740276, -1.32509947e-09, 0.998324335)
+end)
+
+Section:NewButton("Safe Area", "Safearea", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(207.48085, 38.2472305, 200014.953, -0.127381399, 0, -0.991853654, 0, 1, 0, 0.991853654, 0, -0.127381399)
+end)
+
+Section:NewButton("Admin Base", "Admin Base", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-812.945312, -39.6519699, -886.087952, -0.047794532, 7.06912857e-08, -0.998857856, 6.33999946e-08, 1, 6.77385259e-08, 0.998857856, -6.0090052e-08, -0.047794532)
+end)
+
+Section:NewButton("Casino", "Casino", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-883.033081, 21.7472305, -134.714111, -0.999477148, -9.93375338e-09, 0.0323384665, -1.11162954e-08, 1, -3.63878883e-08, -0.0323384665, -3.67283484e-08, -0.999477148)
+end)
+
+Section:NewButton("Rpg", "Rpg", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(98.5836258, -26.7528, -272.187347, -0.0440735668, 7.3992183e-08, -0.999028563, -1.74378947e-08, 1, 7.48333733e-08, 0.999028563, 2.0719142e-08, -0.0440735668)
+end)
+
+Section:NewButton("Foodstore(UP)", "fu", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(306.006714, 49.290184, -623.084167, 0.998556256, -4.8281418e-08, -0.0537165031, 4.37011316e-08, 1, -8.64423484e-08, 0.0537165031, 8.39700718e-08, 0.998556256)
+end)
+
+Section:NewButton("Foodstore(DOWN)", "Fd", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-324.117645, 23.6879921, -291.49292, 0.00937884487, -3.25912475e-09, -0.999956012, -1.01920477e-07, 1, -4.21520641e-09, 0.999956012, 1.01955528e-07, 0.00937884487)
+end)
+    Section:NewButton("Double-Barrel", "Double-Barrel", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1042.97693, 21.7575264, -257.207397, -0.999984205, -6.31175945e-10, -0.00562367588, -4.71697903e-10, 1, -2.83596542e-08, 0.00562367588, -2.83565544e-08, -0.999984205)
+end)
+-------------------------------------------------------------------------------
+ local Section = Extra:NewSection("Extra")
+ Section:NewKeybind("Open/Close Ui", "KeybindInfo", Enum.KeyCode.V, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("Auto Farm", "Auto Farm Gui IS NOT MINE.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/74VJ07iY", true))()
+end)
+ 
+ 
+ 
+ 
+ 
+
+
+ -------------------------------------------------------------------------------
+ local Section = Toggles:NewSection("Toggle")
+ Section:NewToggle("Anti Stomp", "Anti Stomp", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Ctrl+Click Tp", "Ctrl+Click Tp", function(state)
+    if state then
+        local Imput = game:GetService("UserInputService")
+local Plr = game.Players.LocalPlayer
+local Mouse = Plr:GetMouse()
+ 
+function To(position)
+   local Chr = Plr.Character
+   if Chr ~= nil then
+       Chr:MoveTo(position)
+   end
+end
+ 
+Imput.InputBegan:Connect(function(input)
+   if input.UserInputType == Enum.UserInputType.MouseButton1 and Imput:IsKeyDown(Enum.KeyCode.LeftControl) then
+       To(Mouse.Hit.p)
+   end
+end)
+
+    else
+        print("Toggle Off")
+    end
+end)
+ 
+ 
+ 
+ 
+ 
+ 
+ ------------------------------------------------------------
+    local Section = Main:NewSection("Main")
+    Section:NewButton("Fly", "Press X To Fly", function()
+    print("Clicked")
+end)
+
+Section:NewButton("Noclip", "Press Z To noclip", function()
+    print("Clicked")
+end)
+    
+    
+    Section:NewButton("Esp", "esp", function()
+
+
+local esp_settings = { ---- table for esp settings 
+    textsize = 8,
+    colour = 255,255,255
+}
+
+local gui = Instance.new("BillboardGui")
+local esp = Instance.new("TextLabel",gui) ---- new instances to make the billboard gui and the textlabel
+
+
+
+gui.Name = "Cracked esp"; ---- properties of the esp
+gui.ResetOnSpawn = false
+gui.AlwaysOnTop = true;
+gui.LightInfluence = 0;
+gui.Size = UDim2.new(1.75, 0, 1.75, 0);
+esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+esp.Text = ""
+esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
+esp.BorderSizePixel = 4;
+esp.BorderColor3 = Color3.new(esp_settings.colour)
+esp.BorderSizePixel = 0
+esp.Font = "GothamSemibold"
+esp.TextSize = esp_settings.textsize
+esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
+
+game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
+    for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+        if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil  then -- craeting checks for team check, local player etc
+            esp.Text = "{"..v.Name.."}"
+            gui:Clone().Parent = v.Character.Head
+    end
+end
+end)
+
+end)
+---
+    local Section = Player:NewSection("Player")
+    Section:NewButton("WalkSpeed", "Makes you go faster", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
+end)
+Section:NewButton("Force Reset", "Force Reset", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+---
+    local Section = Animations:NewSection("Animations")
+    Section:NewButton("Sweat Animation", "This is for Piavinnie", function()
+    while true do
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=2510196951"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+wait(1)
+end
+end)
+end
